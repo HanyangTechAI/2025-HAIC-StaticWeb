@@ -76,10 +76,13 @@ function ReplayViewer() {
     <div>
       <div style={{ marginBottom: '1rem' }}>
         <textarea
-          placeholder="리플레이 데이터를 붙여넣으세요"
+          placeholder="리플레이 데이터를 붙여넣어 주세요. \n 예시 형태 : 5,5,0,3,3,0,1,1,4,1,0,0,1,0,1,4,5,0,0,4,4,0,1,3,4,1,0,1,1,0,1,0,5,0,0,2,2,1,1,2,1,0,0,4,4,1,1,0,2,0,0,1,4,1 "
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
         />
+        <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: '#555' }}>
+          샘플 테스트 진행 시, 제출하신 모델이 플레이어 1, 샘플 AI 모델이 플레이어 2에 해당됩니다.
+        </p>
         {!replayData ? (
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0.75rem' }}>
             <button type="button" onClick={handleParse}>
